@@ -1,0 +1,15 @@
+<script>
+Polymer({
+  is: "get-field",
+  properties: {
+    output:{computed:"getOutput(data,field)",notify: true}
+  },
+  getOutput: function(data,field) { if (data && field) {
+    var output = []
+    for (var i = 0; i < data.length; i++) {
+      output.push(data[i][field])
+    }
+    return output
+  }}
+})
+</script>
